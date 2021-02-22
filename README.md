@@ -42,7 +42,7 @@ The tutorial can be inspected by running `edit example`. This is how I recommend
 
 You can remove the program with `rm example` after having seen the tutorial at least once. It isn't necessary to run this command again on any another computer.
 
-## How the fix works
+## How the fixes work
 My server acts as a middleman by making the HTTPS requests for you. What enables this is that I've set up my server to allow incoming HTTP requests, which most websites nowadays don't.
 
 With `https.get(url)` or `https.post(url)` you send a HTTP request to my server, along with the *actual* URL you'd like to make a HTTPS request from/to.
@@ -50,7 +50,7 @@ With `https.get(url)` or `https.post(url)` you send a HTTP request to my server,
 My server makes that *actual* HTTPS request. The other website responds to my server with a response, and my server then responds to your original HTTP request with that same response.
 
 ## Hosting the server yourself
-`npm install`
+Download this repository and run `npm install` to install the required libraries. Run `node server.js` afterwards and you should now be able to change the `redirect_url` in `files/https.lua` to your own IP/URL. You should now also be able to do the same for the Pastebin command.
 
 ## Get in contact
 If you have any questions or just want to have a chat you can contact me via Discord: `#MyNameIsTrez1585`
