@@ -1,0 +1,23 @@
+{
+  "name": "pastebin-and-https-tekkit-classic",
+  "version": "1.0.0",
+  "description": "Pastebin and HTTPS fix for Tekkit Classic.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MyNameIsTrez/Pastebin-And-HTTPS-Tekkit-Classic.git"
+  },
+  "author": "MyNameIsTrez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MyNameIsTrez/Pastebin-And-HTTPS-Tekkit-Classic/issues"
+  },
+  "homepage": "https://github.com/MyNameIsTrez/Pastebin-And-HTTPS-Tekkit-Classic#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
