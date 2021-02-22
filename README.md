@@ -54,7 +54,7 @@ With `https.get(url)` or `https.post(url)` you send a HTTP request to my server,
 My server makes that *actual* HTTPS request. The other website responds to my server with a response, and my server then responds to your original HTTP request with that same response.
 
 ## Hosting the server yourself
-Download this repository and run `npm install` to install the required libraries. Run `node server.js` afterwards and you should now be able to change the `redirect_url` in `files/https.lua` to your own IP/URL. You should now also be able to do the same for the Pastebin command.
+Download this repository and run `npm install` to install the required libraries. Run `node server.js` afterwards and you should now be able to change the `redirect_url` in `files/https.lua` to your own IP/URL. You should be able to change it to `http://localhost:3000` if you just want to host the server locally. You should also be able to do the same for the Pastebin command to fix that in a similar manner.
 
 ## Get in contact
 If you have any questions or just want to have a chat you can contact me via Discord: `#MyNameIsTrez1585`
