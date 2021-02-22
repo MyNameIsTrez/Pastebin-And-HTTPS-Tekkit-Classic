@@ -11,4 +11,4 @@ Proin risus turpis, tempor eu suscipit sit amet, semper sed urna. Nulla iaculis 
 Nam vitae finibus dolor, in aliquet mauris. Duis mattis velit quis nisi sagittis, et tristique urna rutrum. Maecenas dapibus rhoncus lacus a fringilla. Sed sit amet eros tortor. Nunc pulvinar posuere magna nec blandit. Vestibulum ut condimentum orci. Donec convallis nisl vel mi rhoncus mollis. Ut pharetra nec nibh ac pellentesque. Duis efficitur ipsum ut vehicula fringilla.
 
 ## Get in contact
-If you have any questions you can talk to me on Discord: #MyNameIsTrez1585.
+If you have any questions or just want to have a chat you can contact me via Discord: #MyNameIsTrez1585
