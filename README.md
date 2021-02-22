@@ -12,9 +12,13 @@ If the value after `enableAPI_http=` is `0` then you should change that to `1`. 
 
 Now go to `%appdata%/.technic/modpacks/tekkit/mods/ComputerCraft/lua/rom/programs/http` and open `pastebin` with Notepad.
 
-Copy this command (it's a single line) and replace what was on line 76 with it:
+Copy this command and replace what is on line 35 with it:
 
-`"http://h2896147.stratoserver.net:1337".."/https?url=".."https://pastebin.com/raw/"..textutils.urlEncode( sCode )`
+`"http://h2896147.stratoserver.net:1337".."/https-post?url=".."https://pastebin.com/api/api_post.php",` 
+
+Now also copy this command (it's a single line) and replace what is on line 76 with it:
+
+`"http://h2896147.stratoserver.net:1337".."/https-get?url=".."https://pastebin.com/raw/"..textutils.urlEncode( sCode )`
 
 Hold `ctrl+s` to save the file and close the file after that.
 
@@ -26,7 +30,7 @@ You can copy the command below by selecting it and holding `ctrl+c`. Now open a 
 ### Description
 It'll download a Lua library containing the functions `get()` and `post()`.
 
-To use this library in your own code you just have to add `os.loadAPI("https")` at the top of your file, which'll enable you to do `https.get()` and `https.post()`. See the section below on how you can download an example file, which'll act as a further tutorial.
+To use this library in your own code you just have to add `os.loadAPI("https")` at the top of your file, which'll enable you to do `https.get(url)` and `https.post(url)`. See the section below on how you can download an example file, which'll act as a further tutorial.
 
 ## HTTPS example download command
 You can copy the command below by selecting it and holding `ctrl+c`. Now open a Computer, type `lua` and paste it with `ctrl+v`:

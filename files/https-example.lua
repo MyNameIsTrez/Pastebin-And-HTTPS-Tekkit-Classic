@@ -11,7 +11,7 @@ sleep(5)
 
 print("\nNot only Pastebin is suddenly accessible with the power of HTTPS; any website or web API now is!")
 
-quote = https.get("https://api.kanye.rest/?format=text")
+quote = https.get("https://api.kanye.rest/?format=text").readAll()
 sleep(10)
 
 write("\nHave a random Kanye quote for example that I just now requested from a web API:")

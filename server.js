@@ -26,8 +26,8 @@ app.get("/https-example-download", (req, res) => {
 	res.download("files/https-example.lua")
 })
 
-app.get("/https", (httpRequest, httpResponse) => {
-	console.log("/https request received.");
+app.get("/https-get", (httpRequest, httpResponse) => {
+	console.log("/https-get request received.");
 	if (httpRequest.query.url !== undefined) {
 		https.get(httpRequest.query.url, (httpsResponse) => {
 			let body = "";
