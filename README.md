@@ -1,4 +1,4 @@
-<p align="center"><img src="Media/logo.png" alt="Logo"></p>
+<p align="center"><img src="media/logo.png" alt="Logo"></p>
 <h1 align="center">Pastebin and HTTPS fix for Tekkit Classic</h1>
 
 ## Getting started
