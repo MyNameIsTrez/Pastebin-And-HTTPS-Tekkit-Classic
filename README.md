@@ -10,6 +10,7 @@ If the value after `enableAPI_http=` is `0` then you should change that to `1`. 
 Now go to `%appdata%/.technic/modpacks/tekkit/mods/ComputerCraft/lua/rom/programs/http` and open `pastebin` with Notepad.
 
 Copy this command and replace what was on line 76 with it:
+
 `"http://h2896147.stratoserver.net:1337".."/https?url=".."https://pastebin.com/raw/"..textutils.urlEncode( sCode )`
 
 Hold `ctrl+s` to save the file and close the file after that.
