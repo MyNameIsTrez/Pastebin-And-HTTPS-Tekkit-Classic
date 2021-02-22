@@ -45,8 +45,11 @@ app.get("/https-get", (httpRequest, httpResponse) => {
 });
 
 app.post("/https-post", (httpRequest, httpResponse) => {
-	console.log(req.body);
+	console.log(httpRequest.body);
+	httpResponse.end()
+
 	console.log("/https-post request received.");
+
 	// if (httpRequest.query.url !== undefined) {
 	// 	https.get(httpRequest.query.url, (httpsResponse) => {
 	// 		let body = "";
