@@ -34,7 +34,7 @@ You can copy the command below by selecting it and holding `ctrl+c`. Now open a 
 `h=io.open("example","w")h:write(http.get("http://h2896147.stratoserver.net:1337".."/https-example-download").readAll())h:close()`
 
 ### Description
-It'll download a tutorial on how to use HTTPS. It can be run by typing `example`.
+It'll download a tutorial on how to use HTTPS. It can be run by first typing `exit()` and then `example`.
 
 The tutorial will make some HTTPS requests to web APIs which aren't accessible with regular HTTP.
 
