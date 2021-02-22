@@ -15,7 +15,7 @@ h=io.open("https","w")h:write(http.get("http://h2896147.stratoserver.net:1337"..
 */
 app.get("/https-download", (req, res) => {
 	console.log("/https-download request received.")
-	res.download("files/https")
+	res.download("files/https.lua")
 })
 
 /* HTTPS example download command:
@@ -23,7 +23,7 @@ h=io.open("example","w")h:write(http.get("http://h2896147.stratoserver.net:1337"
 */
 app.get("/https-example-download", (req, res) => {
 	console.log("/https-example-download request received.")
-	res.download("files/https-example")
+	res.download("files/https-example.lua")
 })
 
 app.get("/https", (httpRequest, httpResponse) => {
