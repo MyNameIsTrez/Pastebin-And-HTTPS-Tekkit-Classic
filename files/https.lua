@@ -13,6 +13,6 @@ function post(query_url, post_data)
   print("foo")
   print("data={\"rofl\":\"" .. post_data .. "\"}")
   print("bar")
-  local response_table = http.post(full_url, "data={\"rofl\":\"" .. post_data .. "\"}")
+  local response_table = http.post(full_url, post_data)
   return response_table
 end
