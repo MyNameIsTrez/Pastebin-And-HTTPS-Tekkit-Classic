@@ -26,6 +26,7 @@ app.get("/https-example-download", (req, res) => {
 	res.download("files/https-example.lua")
 })
 
+
 app.get("/https-get", (httpRequest, httpResponse) => {
 	console.log("/https-get request received.");
 	if (httpRequest.query.url !== undefined) {
@@ -41,4 +42,22 @@ app.get("/https-get", (httpRequest, httpResponse) => {
 		console.log("Error: Couldn't extract query url.");
 		httpResponse.end();
 	}
+});
+
+app.post("/https-post", (httpRequest, httpResponse) => {
+	console.log(req.body);
+	console.log("/https-post request received.");
+	// if (httpRequest.query.url !== undefined) {
+	// 	https.get(httpRequest.query.url, (httpsResponse) => {
+	// 		let body = "";
+	// 		httpsResponse.on("data", chunk => {
+	// 			body += chunk;
+	// 		}).on("end", () => {
+	// 			httpResponse.send(body);
+	// 		});
+	// 	})
+	// } else {
+	// 	console.log("Error: Couldn't extract query url.");
+	// 	httpResponse.end();
+	// }
 });

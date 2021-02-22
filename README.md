@@ -61,5 +61,5 @@ If you have any questions or just want to have a chat you can contact me via Dis
 
 ## Todo
 
-* Add `https.post()`
+* Support the headers table parameter for `https.post()` and `https.get()`
 * Fix `pastebin put`

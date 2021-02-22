@@ -7,9 +7,9 @@ function get(query_url)
   return response_table
 end
 
--- function post(query_url, post_data)
---   local redirect_url = "http://h2896147.stratoserver.net:1337"
---   local full_url = redirect_url .. "/https-post?url=" .. query_url .. "&data=" .. post_data
---   local response_table = http.post(full_url)
---   return response_table
--- end
+function post(query_url, post_data)
+  local redirect_url = "http://h2896147.stratoserver.net:1337"
+  local full_url = redirect_url .. "/https-post?url=" .. query_url
+  local response_table = http.post(full_url, post_data)
+  return response_table
+end

@@ -14,7 +14,7 @@ print("\nNot only Pastebin is suddenly accessible with the power of HTTPS; any w
 quote = https.get("https://api.kanye.rest/?format=text").readAll()
 sleep(10)
 
-write("\nHave a random Kanye quote for example that I just now requested from a web API:")
+write("\nHave a random Kanye quote for example that you just requested from a web API:")
 print(" '" .. quote .. "'")
 sleep(10)
 
@@ -28,10 +28,10 @@ sleep(15)
 print("\nThis specific problem can luckily still be overcome by just finding a website that accepts HTTP requests, but there aren't that many of them nowadays.")
 sleep(15)
 
-print("\nWebsites that accept HTTP will return your IP/time if you're in singleplayer, or the IP/time of where your MC server is hosted in multiplayer.")
+print("\nWebsites that accept HTTP will return your real-life IP/time if you're in singleplayer, or the IP/time of where your MC server is hosted in multiplayer.")
 sleep(15)
 
-write("\nHere's your country, based on the IP address this regular HTTP request was sent from:")
+write("\nHere's your country for example, based on the IP address this regular HTTP request was sent from:")
 print(" '" .. http.get("http://ip-api.com/line/?fields=country").readAll() .. "'")
 sleep(15)
 
@@ -49,4 +49,4 @@ print("\nMake a turtle dance when it rains a lot in Africa!")
 sleep(10)
 
 
-print("\nLook up 'fun api ideas' online and get creative! :)")
+print("\nLook up 'fun api ideas' and get creative! :)")
