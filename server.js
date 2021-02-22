@@ -9,6 +9,11 @@ app.listen(1337, () => {
 	console.log("Listening...");
 });
 
+// ComputerCraft versions below 1.63 don't support custom headers,
+// so the content-type of those is always 'application/x-www-form-urlencoded'.
+// This fixes app.post().
+app.use(bodyParser.urlencoded({ extended: true }))
+
 
 /* HTTPS download command:
 h=io.open("https","w")h:write(http.get("http://h2896147.stratoserver.net:1337".."/https-download").readAll())h:close()
