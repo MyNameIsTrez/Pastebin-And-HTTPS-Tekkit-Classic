@@ -9,20 +9,7 @@ print("This is a showcase of what's possible with HTTPS.")
 sleep(6)
 
 
-url = "https://pastebin.com/raw/fd3Fv3iJ"
-response = https.get(url)
-
-handle = io.open("planets", "w")
-handle:write(response)
-handle:close()
-
-print("\nDownloaded example Pastebin program 'planets', which simulates orbits!")
-sleep(7)
-print("\nYou can run it by typing 'planets' after this showcase is done.")
-sleep(10)
-
-
-print("\nNot only Pastebin is accessible via HTTPS; any website or API is!")
+print("\nNot only Pastebin is suddenly accessible with the power of HTTPS; any website or API now is!")
 
 quote = https.get("https://api.kanye.rest/?format=text")
 sleep(13)
@@ -62,4 +49,4 @@ print("\nMake a turtle dance when it rains a lot in Africa!")
 sleep(10)
 
 
-print("\nLook up 'fun api ideas' online, get creative and don't forget to try out 'planets'! :-)")
+print("\nLook up 'fun api ideas' online and get creative! :)")
