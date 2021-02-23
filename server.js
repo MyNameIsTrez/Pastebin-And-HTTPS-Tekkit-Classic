@@ -48,11 +48,17 @@ app.get("/https-get", (httpRequest, httpResponse) => {
 app.post("/https-post", (httpRequest, httpResponse) => {
 	console.log("/https-post request received.");
 
+	const data = httpRequest.body;
+
 	const myURL = new URL(httpRequest.query.url);
 	const options = {
 		host: myURL.hostname,
 		path: myURL.pathname,
 		method: "POST",
+		headers: {
+			"Content-Type": "application/json",
+			"Content-Length": data.length,
+		},
 	};
 
 	if (httpRequest.query.url !== undefined) {
@@ -69,8 +75,8 @@ app.post("/https-post", (httpRequest, httpResponse) => {
 			console.error(error);
 		});
 		// console.log(JSON.stringify(httpRequest.body));
-		// req.write(httpRequest.body.data);
-		req.write(JSON.stringify(httpRequest.body));
+		// req.write(httpRequest.body.data); // Non-JSON.
+		req.write(JSON.stringify(data));
 		req.end();
 	} else {
 		console.log("Error: Couldn't extract query url.");
