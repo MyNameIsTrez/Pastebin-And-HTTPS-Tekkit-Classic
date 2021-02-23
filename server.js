@@ -32,7 +32,7 @@ app.get("/https-get", (httpRequest, httpResponse) => {
 	if (httpRequest.query.url !== undefined) {
 		https.get(httpRequest.query.url, (httpsResponse) => {
 			let body = "";
-			httpsResponse.on("data", chunk => {
+			httpsResponse.on("data", (chunk) => {
 				body += chunk;
 			}).on("end", () => {
 				httpResponse.send(body);
@@ -57,8 +57,8 @@ app.post("/https-post", (httpRequest, httpResponse) => {
 
 	if (httpRequest.query.url !== undefined) {
 		const req = https.request(options, (httpsResponse) => {
-			let body = "placeholder";
-			httpsResponse.on("data", chunk => {
+			let body = "";
+			httpsResponse.on("data", (chunk) => {
 				body += chunk;
 			}).on("end", () => {
 				httpResponse.send(body);
