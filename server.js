@@ -74,7 +74,7 @@ app.post("/https-post", (httpRequest, httpResponse) => {
 		req.on("error", (error) => {
 			console.error(error);
 		});
-		console.log(httpRequest.body.data);
+		console.log(httpRequest.body);
 		// req.write(httpRequest.body.data); // Non-JSON object, just a string.
 		req.write(httpRequest.body.data);
 		req.end();
