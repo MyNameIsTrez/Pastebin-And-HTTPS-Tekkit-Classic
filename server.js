@@ -55,10 +55,10 @@ app.post("/https-post", (httpRequest, httpResponse) => {
 		host: myURL.hostname,
 		path: myURL.pathname,
 		method: "POST",
-		headers: {
-			"Content-Type": "application/json",
-			// "Content-Length": data.length,
-		},
+		// headers: {
+		// 	"Content-Type": "application/json",
+		// 	// "Content-Length": data.length,
+		// },
 	};
 
 	if (httpRequest.query.url !== undefined) {
