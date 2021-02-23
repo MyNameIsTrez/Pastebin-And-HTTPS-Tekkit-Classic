@@ -52,8 +52,12 @@ app.post("/https-post", (httpRequest, httpResponse) => {
 	console.log("/https-post request received.");
 
 	const options = {
-		hostname: httpRequest.query.url,
+		// hostname: httpRequest.query.url,
 		// path: '/post',
+
+		hostname: 'webhook.site',
+		path: '/a4304b41-0933-4b51-9ad8-27a7275ae653',
+		
 		method: 'POST',
 		headers: {
 			'Content-Type': 'application/json', // TODO: Remove?
@@ -65,7 +69,8 @@ app.post("/https-post", (httpRequest, httpResponse) => {
 		const req = https.request(options, (httpsResponse) => {
 			httpsResponse.on("data", (d) => {
 				// process.stdout.write(d);
-				console.log(d);
+				// console.log(d);
+				process.stdout.write(d);
 			});
 		});
 		req.on("error", (error) => {
