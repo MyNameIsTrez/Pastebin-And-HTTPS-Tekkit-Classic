@@ -55,7 +55,7 @@ app.post("/https-post", (httpRequest, httpResponse) => {
 		path: myURL.pathname,
 		method: "POST",
 		headers: {
-			"Content-Type": "application/x-www-form-urlencoded",
+			"Content-Type": "application/x-www-form-urlencoded", // Required for pastebin put to work.
 		},
 	};
 
@@ -68,6 +68,7 @@ app.post("/https-post", (httpRequest, httpResponse) => {
 				httpResponse.send(body);
 			});
 		});
+		
 		req.on("error", (error) => {
 			console.error(error);
 		});
