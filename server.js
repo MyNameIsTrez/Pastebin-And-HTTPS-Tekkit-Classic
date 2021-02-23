@@ -99,9 +99,11 @@ app.post("/https-post", (httpRequest, httpResponse) => {
 
 function serialize(obj) {
 	let str = [];
-	for (let p in obj)
+	for (const p in obj) {
 		if (obj.hasOwnProperty(p)) {
-		str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+			// str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+			str.push(encodeURIComponent(p).trim() + "=" + encodeURIComponent(obj[p]).trim());
+		}
 	}
 	return str.join("&");
 }
