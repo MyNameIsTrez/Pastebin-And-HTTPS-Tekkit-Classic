@@ -46,29 +46,12 @@ app.get("/https-get", (httpRequest, httpResponse) => {
 
 // Use webhook.site to debug.
 app.post("/https-post", (httpRequest, httpResponse) => {
-	const data = httpRequest.body.data;
-
-	console.log(data);
-	httpResponse.end();
-
 	console.log("/https-post request received.");
 
-	// const options = {
-	// 	// hostname: httpRequest.query.url,
-	// 	// path: '/post',
-
-	// 	hostname: 'webhook.site',
-	// 	path: '/a4304b41-0933-4b51-9ad8-27a7275ae653',
-	// 	method: 'POST',
-	// };
-
 	const myURL = new URL(httpRequest.query.url);
-
-	console.log(myURL);
-
 	const options = {
-		path: myURL.pathname,
 		host: myURL.hostname,
+		path: myURL.pathname,
 		method: "POST",
 	};
 
@@ -81,7 +64,7 @@ app.post("/https-post", (httpRequest, httpResponse) => {
 		req.on("error", (error) => {
 			console.error(error);
 		});
-		req.write(data);
+		req.write(httpRequest.body.data);
 		req.end();
 	} else {
 		console.log("Error: Couldn't extract query url.");
