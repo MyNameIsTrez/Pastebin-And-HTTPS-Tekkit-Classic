@@ -15,7 +15,7 @@ If you're a player on a server you'll have to ask the owner to change this setti
 
 ### If you have access to the single player/server files or can ask the owner
 
-Now go to `%appdata%/.technic/modpacks/tekkit/mods/ComputerCraft/lua/rom/programs/http` and open `pastebin` with Notepad.
+Go to `%appdata%/.technic/modpacks/tekkit/mods/ComputerCraft/lua/rom/programs/http` and open `pastebin` with Notepad.
 
 ### If you don't have access to the single player/server files and can't ask the owner
 
