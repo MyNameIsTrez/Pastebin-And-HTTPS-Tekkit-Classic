@@ -6,12 +6,12 @@ The `pastebin` command recently got broken in Tekkit Classic due to Pastebin not
 
 Additionally, this page also covers how you can make HTTPS requests from Tekkit Classic, which is normally not possible due to HTTPS being added to ComputerCraft after Tekkit Classic came out.
 
-## Pastebin fix command
+## Pastebin fix commands
 
 Copy this into your File Explorer's search bar: `%appdata%/.technic/modpacks/tekkit/config` and open `mod_ComputerCraft.cfg` with Notepad.
 If the value after `enableAPI_http=` is `0` then you should change that to `1`. Hold `ctrl+s` to save the file and close the file after that.
 
-If you're a player on a server you'll have to ask the owner to change this setting for you; just send that person this page and tell them to follow these instructions under this `Pastebin fix command` header.
+If you're a player on a server you'll have to ask the owner to change this setting for you; just send that person this page and tell them to follow these instructions under this `Pastebin fix commands` header.
 
 ### If you have access to the single player/server files or can ask the owner
 
