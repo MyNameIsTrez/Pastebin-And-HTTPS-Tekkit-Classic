@@ -59,7 +59,7 @@ app.post("/https-post", (httpRequest, httpResponse) => {
 		hostname: 'webhook.site',
 		path: '/a4304b41-0933-4b51-9ad8-27a7275ae653',
 		
-		method: 'POST',
+		// method: 'POST',
 		// headers: {
 		// 	'Content-Type': 'application/json', // TODO: Remove?
 		// 	'Content-Length': data.length,
