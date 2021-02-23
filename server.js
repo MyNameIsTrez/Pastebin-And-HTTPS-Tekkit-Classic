@@ -101,8 +101,8 @@ function serialize(obj) {
 	let str = [];
 	for (const p in obj) {
 		if (obj.hasOwnProperty(p)) {
-			// str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
-			str.push(encodeURIComponent(p).trim() + "=" + encodeURIComponent(obj[p]).trim());
+			str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+			// str.push(encodeURIComponent(p).trim() + "=" + encodeURIComponent(obj[p]).trim()); // TODO: Try replacing this with the one above.
 		}
 	}
 	return str.join("&");
