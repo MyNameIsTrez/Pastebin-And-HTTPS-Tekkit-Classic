@@ -61,12 +61,8 @@ app.post("/https-post", (httpRequest, httpResponse) => {
 	// 	method: 'POST',
 	// };
 
-	const options = {
-		method: 'POST',
-	};
-
 	if (httpRequest.query.url !== undefined) {
-		const req = https.request(httpRequest.query.url, options, (httpsResponse) => {
+		const req = https.request(url=httpRequest.query.url, options={ method: "POST" }, (httpsResponse) => {
 			httpsResponse.on("data", (d) => {
 				process.stdout.write(d);
 			});
