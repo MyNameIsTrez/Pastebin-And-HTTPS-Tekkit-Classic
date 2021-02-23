@@ -13,7 +13,7 @@ app.listen(1337, () => {
 // This fixes app.post().
 // ComputerCraft versions below 1.63 don't support custom headers,
 // so the content-type of those is always 'application/x-www-form-urlencoded'.
-// app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 
 app.get("/https-download", (req, res) => {
@@ -55,10 +55,11 @@ app.post("/https-post", (httpRequest, httpResponse) => {
 		host: myURL.hostname,
 		path: myURL.pathname,
 		method: "POST",
-		// headers: {
-		// 	"Content-Type": "application/json",
-		// 	// "Content-Length": data.length,
-		// },
+		headers: {
+			"Content-Type": "application/x-www-form-urlencoded",
+			// "Content-Type": "application/json",
+			// "Content-Length": data.length,
+		},
 	};
 
 	if (httpRequest.query.url !== undefined) {
@@ -73,10 +74,6 @@ app.post("/https-post", (httpRequest, httpResponse) => {
 		req.on("error", (error) => {
 			console.error(error);
 		});
-
-		console.log(httpRequest);
-		console.log("----------");
-		console.log(httpRequest.body);
 
 		if (httpRequest.body.hasOwnProperty("data")) { // Means it's one property.
 			console.log("One property!");
