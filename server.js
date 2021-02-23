@@ -57,7 +57,7 @@ app.post("/https-post", (httpRequest, httpResponse) => {
 
 	if (httpRequest.query.url !== undefined) {
 		const req = https.request(options, (httpsResponse) => {
-			let body = "";
+			let body = "placeholder";
 			httpsResponse.on("data", chunk => {
 				body += chunk;
 			}).on("end", () => {
