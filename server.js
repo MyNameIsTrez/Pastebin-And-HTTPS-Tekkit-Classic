@@ -44,7 +44,8 @@ app.get("/https-get", (httpRequest, httpResponse) => {
 	}
 });
 
-// Use https://webhook.site to debug.
+// Use https://webhook.site to debug and temporarily replace line 35 of the 'pastebin' file with this:
+// "http://h2896147.stratoserver.net:1337".."/https-post?url=".."https://webhook.site/a4304b41-0933-4b51-9ad8-27a7275ae653",
 app.post("/https-post", (httpRequest, httpResponse) => {
 	console.log("/https-post request received.");
 
