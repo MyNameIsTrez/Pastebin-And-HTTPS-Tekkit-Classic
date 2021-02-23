@@ -44,7 +44,7 @@ app.get("/https-get", (httpRequest, httpResponse) => {
 	}
 });
 
-// Use webhook.site to debug.
+// Use https://webhook.site to debug.
 app.post("/https-post", (httpRequest, httpResponse) => {
 	console.log("/https-post request received.");
 
