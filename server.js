@@ -62,7 +62,7 @@ app.post("/https-post", (httpRequest, httpResponse) => {
 	};
 
 	if (httpRequest.query.url !== undefined) {
-		console.log(options);
+		// console.log(options);
 		const req = https.request(options, (httpsResponse) => {
 			let body = "";
 			httpsResponse.on("data", (chunk) => {
@@ -74,7 +74,7 @@ app.post("/https-post", (httpRequest, httpResponse) => {
 		req.on("error", (error) => {
 			console.error(error);
 		});
-		// console.log(JSON.stringify(httpRequest.body));
+		console.log(httpRequest.body.data);
 		// req.write(httpRequest.body.data); // Non-JSON object, just a string.
 		req.write(httpRequest.body.data);
 		req.end();
