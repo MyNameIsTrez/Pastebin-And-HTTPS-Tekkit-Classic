@@ -67,9 +67,9 @@ app.post("/https-post", (httpRequest, httpResponse) => {
 		req.on("error", (error) => {
 			console.error(error);
 		});
-		console.log(httpRequest.body);
+		console.log(JSON.stringify(httpRequest.body));
 		// req.write(httpRequest.body.data);
-		req.write(httpRequest.body);
+		req.write(JSON.stringify(httpRequest.body));
 		req.end();
 	} else {
 		console.log("Error: Couldn't extract query url.");
