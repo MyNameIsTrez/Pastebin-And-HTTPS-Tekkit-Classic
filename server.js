@@ -62,15 +62,13 @@ app.post("/https-post", (httpRequest, httpResponse) => {
 	// 	method: 'POST',
 	// };
 
-	// const q = lol.parse(httpRequest.query.url, true);
-
-	const myURL = new URL('https://user:pass@sub.example.com:8080/p/a/t/h?query=string#hash');
+	const myURL = new URL(httpRequest.query.url);
 
 	console.log(myURL);
 
 	const options = {
-		path:  q.pathname,
-		host: q.hostname,
+		path: myURL.pathname,
+		host: myURL.hostname,
 		method: "POST",
 	};
 
