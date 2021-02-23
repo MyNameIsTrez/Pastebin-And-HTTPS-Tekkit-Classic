@@ -69,6 +69,7 @@ app.post("/https-post", (httpRequest, httpResponse) => {
 		});
 		console.log(httpRequest.body.data);
 		console.log(typeof(httpRequest.body.data));
+		// console.log(httpRequest.body);
 		req.write(httpRequest.body.data);
 		req.end();
 	} else {
