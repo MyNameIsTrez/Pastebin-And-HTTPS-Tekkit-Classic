@@ -13,7 +13,7 @@ app.listen(1337, () => {
 // This fixes app.post().
 // ComputerCraft versions below 1.63 don't support custom headers,
 // so the content-type of those is always 'application/x-www-form-urlencoded'.
-app.use(bodyParser.urlencoded({ extended: true }));
+// app.use(bodyParser.urlencoded({ extended: true }));
 
 
 app.get("/https-download", (req, res) => {
