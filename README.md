@@ -62,4 +62,5 @@ If you have any questions or just want to have a chat you can contact me via Dis
 ## Todo
 
 * Support the headers table parameter for `https.post()` and `https.get()`
+* Figure out whether `https.post()` should accept tables as its 2nd argument or not.
 * Fix `pastebin put`
