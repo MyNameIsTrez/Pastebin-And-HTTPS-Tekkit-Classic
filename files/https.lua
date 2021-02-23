@@ -11,6 +11,13 @@ function post(query_url, post_data)
     error("https.post() expected string/number as 2nd argument, but got " .. type(post_data))
   end
   local full_url = "http://h2896147.stratoserver.net:1337" .. "/https-post?url=" .. query_url
-  local response_table = http.post(full_url, "data=" .. post_data)
+
+  local response_table
+  if string.find(post_data, "=") then
+    response_table = http.post(full_url, post_data)
+  else
+    response_table = http.post(full_url, "data=" .. post_data)
+  end
+
   return response_table
 end

@@ -75,8 +75,11 @@ app.post("/https-post", (httpRequest, httpResponse) => {
 			console.error(error);
 		});
 		console.log(httpRequest.body);
-		// req.write(httpRequest.body.data); // Non-JSON object, just a string.
-		req.write(httpRequest.body.data);
+		if (httpRequest.body.hasOwnProperty("data")) { // Means it's one property.
+			req.write(httpRequest.body.data);
+		} else { // Means it has multiple properties.
+			req.write(httpRequest.body);
+		}
 		req.end();
 	} else {
 		console.log("Error: Couldn't extract query url.");
