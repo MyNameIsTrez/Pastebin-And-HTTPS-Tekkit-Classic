@@ -82,8 +82,13 @@ app.post("/https-post", (httpRequest, httpResponse) => {
 		} else { // Means it has multiple properties.
 			console.log("Multiple properties!");
 			console.log(httpRequest.body)
-			console.log(JSON.stringify(httpRequest.body))
-			req.write(JSON.stringify(httpRequest.body));
+
+			const body = httpRequest.body;
+			console.log(serialize(body))
+			req.write(serialize(body));
+
+			// console.log(JSON.stringify(httpRequest.body))
+			// req.write(JSON.stringify(httpRequest.body));
 		}
 		req.end();
 	} else {
@@ -91,3 +96,12 @@ app.post("/https-post", (httpRequest, httpResponse) => {
 		httpResponse.end();
 	}
 });
+
+function serialize(obj) {
+	let str = [];
+	for (let p in obj)
+		if (obj.hasOwnProperty(p)) {
+		str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+	}
+	return str.join("&");
+}
