@@ -48,8 +48,6 @@ app.get("/https-get", (httpRequest, httpResponse) => {
 app.post("/https-post", (httpRequest, httpResponse) => {
 	console.log("/https-post request received.");
 
-	// const data = httpRequest.body;
-
 	const myURL = new URL(httpRequest.query.url);
 	const options = {
 		host: myURL.hostname,
@@ -57,8 +55,6 @@ app.post("/https-post", (httpRequest, httpResponse) => {
 		method: "POST",
 		headers: {
 			"Content-Type": "application/x-www-form-urlencoded",
-			// "Content-Type": "application/json",
-			// "Content-Length": data.length,
 		},
 	};
 
@@ -80,11 +76,7 @@ app.post("/https-post", (httpRequest, httpResponse) => {
 			req.write(httpRequest.body.data);
 		} else { // Means it has multiple properties.
 			console.log("Multiple properties!");
-			// console.log(httpRequest.body);
-
-			const body = httpRequest.body;
-			console.log(serialize(body))
-			req.write(serialize(body));
+			req.write(serialize(httpRequest.body));
 		}
 		req.end();
 	} else {
