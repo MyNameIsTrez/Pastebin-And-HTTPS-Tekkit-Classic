@@ -76,7 +76,7 @@ app.post("/https-post", (httpRequest, httpResponse) => {
 		});
 		// console.log(JSON.stringify(httpRequest.body));
 		// req.write(httpRequest.body.data); // Non-JSON object, just a string.
-		req.write(JSON.stringify(httpRequest.body));
+		req.write(httpRequest.body.data);
 		req.end();
 	} else {
 		console.log("Error: Couldn't extract query url.");
