@@ -43,6 +43,7 @@ app.get("/https-get", (httpRequest, httpResponse) => {
 	}
 });
 
+// Use webhook.site to debug.
 app.post("/https-post", (httpRequest, httpResponse) => {
 	const data = httpRequest.body.data;
 
@@ -59,10 +60,10 @@ app.post("/https-post", (httpRequest, httpResponse) => {
 		path: '/a4304b41-0933-4b51-9ad8-27a7275ae653',
 		
 		method: 'POST',
-		headers: {
-			'Content-Type': 'application/json', // TODO: Remove?
-			'Content-Length': data.length,
-		},
+		// headers: {
+		// 	'Content-Type': 'application/json', // TODO: Remove?
+		// 	'Content-Length': data.length,
+		// },
 	};
 
 	if (httpRequest.query.url !== undefined) {
