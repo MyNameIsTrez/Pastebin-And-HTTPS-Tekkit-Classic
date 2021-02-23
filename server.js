@@ -74,13 +74,15 @@ app.post("/https-post", (httpRequest, httpResponse) => {
 		req.on("error", (error) => {
 			console.error(error);
 		});
-		console.log(httpRequest.body);
-		console.log(typeof(httpRequest.body));
+		// console.log(httpRequest.body);
+		// console.log(typeof(httpRequest.body));
 		if (httpRequest.body.hasOwnProperty("data")) { // Means it's one property.
 			console.log("One property!");
 			req.write(httpRequest.body.data);
 		} else { // Means it has multiple properties.
 			console.log("Multiple properties!");
+			console.log(httpRequest.body)
+			console.log(JSON.stringify(httpRequest.body))
 			req.write(JSON.stringify(httpRequest.body));
 		}
 		req.end();
