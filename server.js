@@ -1,6 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const https = require("https");
+// const url = require("url");
 
 
 const app = express();
@@ -61,8 +62,20 @@ app.post("/https-post", (httpRequest, httpResponse) => {
 	// 	method: 'POST',
 	// };
 
+	// const q = lol.parse(httpRequest.query.url, true);
+
+	const myURL = new URL('https://user:pass@sub.example.com:8080/p/a/t/h?query=string#hash');
+
+	console.log(myURL);
+
+	const options = {
+		path:  q.pathname,
+		host: q.hostname,
+		method: "POST",
+	};
+
 	if (httpRequest.query.url !== undefined) {
-		const req = https.request(url=httpRequest.query.url, options={ method: "POST" }, (httpsResponse) => {
+		const req = https.request(options, (httpsResponse) => {
 			httpsResponse.on("data", (d) => {
 				process.stdout.write(d);
 			});
