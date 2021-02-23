@@ -62,7 +62,6 @@ app.post("/https-post", (httpRequest, httpResponse) => {
 	};
 
 	if (httpRequest.query.url !== undefined) {
-		// console.log(options);
 		const req = https.request(options, (httpsResponse) => {
 			let body = "";
 			httpsResponse.on("data", (chunk) => {
@@ -74,21 +73,17 @@ app.post("/https-post", (httpRequest, httpResponse) => {
 		req.on("error", (error) => {
 			console.error(error);
 		});
-		// console.log(httpRequest.body);
-		// console.log(typeof(httpRequest.body));
+
 		if (httpRequest.body.hasOwnProperty("data")) { // Means it's one property.
 			console.log("One property!");
 			req.write(httpRequest.body.data);
 		} else { // Means it has multiple properties.
 			console.log("Multiple properties!");
-			console.log(httpRequest.body)
+			// console.log(httpRequest.body);
 
 			const body = httpRequest.body;
 			console.log(serialize(body))
 			req.write(serialize(body));
-
-			// console.log(JSON.stringify(httpRequest.body))
-			// req.write(JSON.stringify(httpRequest.body));
 		}
 		req.end();
 	} else {
@@ -102,7 +97,6 @@ function serialize(obj) {
 	for (const p in obj) {
 		if (obj.hasOwnProperty(p)) {
 			str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
-			// str.push(encodeURIComponent(p).trim() + "=" + encodeURIComponent(obj[p]).trim()); // TODO: Try replacing this with the one above.
 		}
 	}
 	return str.join("&");
