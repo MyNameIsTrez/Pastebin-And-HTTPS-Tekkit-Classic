@@ -4,7 +4,7 @@
 ## Introduction
 The `pastebin` command recently got broken in Tekkit Classic due to Pastebin not accepting HTTP requests anymore, so the section below covers how you fix that issue for both singleplayer and multiplayer.
 
-Additionally, this page also covers how you can make HTTPS requests from Tekkit Classic, which is normally not possible due to HTTPS being added to ComputerCraft after Tekkit Classic came out.
+Additionally, this page also covers how you can make HTTPS requests from Tekkit Classic, which is normally not possible due to HTTPS support being added to ComputerCraft after Tekkit Classic came out.
 
 ## Pastebin fix commands
 
