@@ -71,6 +71,28 @@ My server makes that *actual* HTTPS request. The other website responds to my se
 ## Hosting the server yourself
 Download this repository and run `npm install` to install the required libraries. Run `node server.js` afterwards and you should now be able to change the `redirect_url` in `files/https.lua` to your own IP/URL. You should be able to change it to `http://localhost:3000` if you just want to host the server locally. You should also be able to do the same for the Pastebin command to fix that in a similar manner.
 
+### Using the screen command to keep running the server 
+
+#### Add and open screen
+`screen` -> `enter`
+
+#### Run server
+`node app.js`
+
+#### Exit screen
+`ctrl + a` -> `d`
+
+#### Kill screen
+If there's a single screen:
+`screen -r`
+
+If there are multiple screens:
+`screen -ls` -> `screen -r <screen_id>`
+`screen -r <screen_id>`
+
+Then kill the screen:
+`ctrl + a` -> `k` -> `y`
+
 ## Get in contact
 If you have any questions or just want to have a chat you can contact me via Discord: `#MyNameIsTrez1585`
 
