@@ -8,20 +8,20 @@ Additionally, this page also covers how you can make HTTPS requests from Tekkit 
 
 ## Pastebin fix commands
 
-Copy this into your File Explorer's search bar: `%appdata%/.technic/modpacks/tekkit/config` and open `mod_ComputerCraft.cfg` with Notepad.
+Copy this into your File Explorer's search bar: `%appdata%/.technic/modpacks/tekkit/config` and open `mod_ComputerCraft.cfg` with a text editor like Notepad.
 If the value after `enableAPI_http=` is `0` then you should change that to `1`. Hold `ctrl+s` to save the file and close the file after that.
 
 If you're a player on a server you'll have to ask the owner to change this setting for you; just send that person this page and tell them to follow these instructions under this `Pastebin fix commands` header.
 
 ### If you have access to the single player/server files or can ask the owner
 
-Go to `%appdata%/.technic/modpacks/tekkit/mods/ComputerCraft/lua/rom/programs/http` and open `pastebin` with Notepad.
+Go to `%appdata%/.technic/modpacks/tekkit/mods/ComputerCraft/lua/rom/programs/http` and open `pastebin` with Notepad++, or another text editing program with line numbers.
 
 ### If you don't have access to the single player/server files and can't ask the owner
 
 In case you don't have access to the single player/server files and can't ask the owner, there's still the possibility to fix `pastebin get` and `pastebin put` if `enableAPI_HTTP` was set to `1` by the owner already. The downside is that you might not know if the owner has done this and on top of that you'll have to apply this fix on every single Computer one at a time.
 
-Type this into a Computer:
+Type this in a Computer:
 
 `edit rom/programs/http/pastebin`
 
