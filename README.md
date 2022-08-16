@@ -29,11 +29,11 @@ Type this in a Computer:
 
 Copy this command and replace what is on line 35 with it:
 
-`"http://h2896147.stratoserver.net:1337".."/https-post?url=".."https://pastebin.com/api/api_post.php",` 
+`"http://cchtml.toondev.net:1337".."/https-post?url=".."https://pastebin.com/api/api_post.php",` 
 
 Now also copy this command (it's a single line) and replace what is on line 76 with it:
 
-`"http://h2896147.stratoserver.net:1337".."/https-get?url=".."https://pastebin.com/raw/"..textutils.urlEncode( sCode )`
+`"http://cchtml.toondev.net:1337".."/https-get?url=".."https://pastebin.com/raw/"..textutils.urlEncode( sCode )`
 
 Hold `ctrl+s` to save the file and close the file after that.
 
@@ -77,7 +77,7 @@ Download this repository and run `npm install` to install the required libraries
 `screen` -> `enter`
 
 #### Run server
-`node app.js`
+`node server.js`
 
 #### Exit screen
 `ctrl + a` -> `d`
