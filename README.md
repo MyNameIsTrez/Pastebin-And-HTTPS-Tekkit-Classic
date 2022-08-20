@@ -40,7 +40,7 @@ Hold `ctrl+s` to save the file and close the file after that.
 ## HTTPS download command
 You can copy the command below by selecting it and holding `ctrl+c`. Now open a Computer, type `lua` and paste it with `ctrl+v`:
 
-`h=io.open("https","w")h:write(http.get("http://h2896147.stratoserver.net:1337".."/https-download").readAll())h:close()`
+`h=io.open("https","w")h:write(http.get("http://cchtml.toondev.net:1337".."/https-download").readAll())h:close()`
 
 ### Description
 It'll download a Lua library containing the functions `get()` and `post()`.
@@ -50,7 +50,7 @@ To use this library in your own code you just have to add `os.loadAPI("https")` 
 ## HTTPS example download command
 You can copy the command below by selecting it and holding `ctrl+c`. Now open a Computer, type `lua` and paste it with `ctrl+v`:
 
-`h=io.open("example","w")h:write(http.get("http://h2896147.stratoserver.net:1337".."/https-example-download").readAll())h:close()`
+`h=io.open("example","w")h:write(http.get("http://cchtml.toondev.net:1337".."/https-example-download").readAll())h:close()`
 
 ### Description
 It'll download a tutorial on how to use HTTPS. It can be run by first typing `exit()` and then `example`.
